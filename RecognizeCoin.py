@@ -30,7 +30,7 @@ coinValues42 = [100, 100, 10, 1, 5, 5, 25, 25,
                  25, 25, 25, 25, 25, 25, 25, 25,
                  25, 25, 25, 25, 25, 25, 25, 25,
                  25] 
-coinTypes5 = ["Penny", "Nickle", "Dime", "Quarter", "Dollar"]
+coinTypes5 = ["Penny", "Nickel", "Dime", "Quarter", "Dollar"]
 coinValues5 = [1, 5, 10, 25, 100]
 
 # Shuffle dataset to mix coins
@@ -373,7 +373,7 @@ def recognizeUsingMultipleModels(modelsdir, coinTypes, coinValues, imagefn = "",
 # Let multiple models vote for a coin label, then choose the 
 # label voted by most models. Provide either an image filename or
 # a filename containing a dataset. If both are provided, the
-# filename cointaining an image of coins will be used. It is assumed
+# filename containing an image of coins will be used. It is assumed
 # that the models are trained on coins reoriented to 
 # dominant orientations of coins
 def recognizeUsingMultipleModelsNew(modelsdir, coinTypes, coinValues, imagefn = "", datasetfn=""):
@@ -586,7 +586,7 @@ def testThisModel(datasetfn, model1, coinTypes):
     return
 
 # Determine value of coins in an image assuming the model has been 
-# trained using an augmented dataset obtrained by rotating each coin
+# trained using an augmented dataset obtained by rotating each coin
 # about its center by a fixed increment, such as 5 degrees.
 def findTotalCoinValue(imgfn, modelfn, coinTypes, coinValues):
     import CoinClass as cc
@@ -640,7 +640,7 @@ def findTotalCoinValueNew(imgfn, modelfn, coinTypes, coinValues):
     for i in range(len(coins)):
         coin = coins[i]
         lor = tg.findDominantOrientations(coin, 1)  # find coin's dominant orientation
-        rcoin = tg.rotateImage(coin,lor[0])         # reorient coint to its dominant orientation
+        rcoin = tg.rotateImage(coin,lor[0])         # reorient coin to its dominant orientation
         rcoins.append(rcoin)
     
     val_images = []
