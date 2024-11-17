@@ -1,4 +1,4 @@
-# This module contains method to process image controus, some of
+# This module contains method to process image contours, some of
 # which end up as detected coin boundaries.
 
 import cv2
