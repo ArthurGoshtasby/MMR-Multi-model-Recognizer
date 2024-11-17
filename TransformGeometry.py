@@ -235,7 +235,7 @@ def findDominantOrientations(coin, nor, spacing = 10):
     n = 0               # number of orientations found
     PI = math.pi
     sp = spacing        # default minimum spacing between peaks
-    # Map coin intensities radially to its circular boubdary.
+    # Map coin intensities radially to its circular boundary.
     # Weigh an intensity by its distance to center of coin.
     dim = coin.ndim
     
@@ -312,10 +312,10 @@ def findDominantOrientations(coin, nor, spacing = 10):
         return lor
     
     # If lor>1, find the next dominant orientation by locating the
-    # next largest count on the bounday that is away from the already detected
+    # next largest count on the boundary that is away from the already detected
     # most dominant orientations by at least sp units (with default value 10 degrees).
     keeptrack = np.ones(m)                  # knowing the location of the detected peak, 
-    for l in range(loc[0]-sp, loc[0]+sp):   # avoid testing neighnorhoods of the peak
+    for l in range(loc[0]-sp, loc[0]+sp):   # avoid testing neighborhoods of the peak
                                             # for remaining peaks
         if l<0:    
             keeptrack[l+m] = 0
