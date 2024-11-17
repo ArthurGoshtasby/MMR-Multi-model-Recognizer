@@ -28,8 +28,8 @@ from PyQt6.QtWidgets import *
 from PyQt6.QtGui import *
 from PyQt6.QtCore import *
 
-# US coin types: 0: Penny, 1: Nickle, 2: Dime, 3: Quarter, 4: Dollar
-coinTypes = ["Penny", "Nickle", "Dime", "Quarter", "Dollar"]
+# US coin types: 0: Penny, 1: Nickel, 2: Dime, 3: Quarter, 4: Dollar
+coinTypes = ["Penny", "Nickel", "Dime", "Quarter", "Dollar"]
 # Coin values in cents
 coinValues = [1, 5, 10, 25, 100]
 
