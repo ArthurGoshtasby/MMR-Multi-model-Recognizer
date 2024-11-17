@@ -12,7 +12,7 @@ import LoadDisplay as ld
 import TransformGeometry as tg
 
 # This class provides all the functions needed to read an image of coins,
-# extract the coints, create augmented coins from the
+# extract the coins, create augmented coins from the
 # extracted ones and save them for use as training data.
 class Coins:
     def __init__(self):
@@ -237,7 +237,7 @@ class Coins:
             print("coins list is empty.")
             return
         print(f"Enter labels for displayed coins, valid labels are between 0 and 4,")
-        print("0 for penny, 1 for nickle, 2 for dime, 3 for quarter, and 4 for dollar.")
+        print("0 for penny, 1 for nickel, 2 for dime, 3 for quarter, and 4 for dollar.")
         print("If a displayed coin is not a valid coin, enter label -1.")
         print("Close the image window by pressing a key on keyboard; then enter the label.")
         for k in range(n):
@@ -253,7 +253,7 @@ class Coins:
                 self.coinlbls.append(int(l))
         self.coins = coins.copy()
 
-    # Augment detected coins with additional coins obtained by rotaing 
+    # Augment detected coins with additional coins obtained by rotating 
     # each coin about its center from t=0 up to t=360 with increments of theta degrees.
     # Also, let labels for the rotated coins be the label of the coin used  
     # to obtain the rotated coins.
