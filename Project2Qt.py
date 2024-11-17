@@ -9,7 +9,7 @@
 # a model, test a model, or use a combination of the created models to recognize 
 # a class of objects will be carried out. As an example of objects, US coins 
 # will be used. Recognition of other objects requires replacing the coin segmentation
-# method with a segmentation method that can detect the requried object types in an image
+# method with a segmentation method that can detect the required object types in an image
 # for training and recognition.
 
 from turtle import window_width
@@ -131,7 +131,7 @@ class Window1(QWidget):
 
         # Step 1.1. Take images of coins 
         # To simplify detection and extraction of coins in images, take
-        # images of coins laid within homogeneous backgrouds. To prepare a
+        # images of coins laid within homogeneous backgrounds. To prepare a
         # training dataset, place a dozen or so coins on a homogeneous background
         # such as a white surface. To avoid shadows of coins onto the
         # background, avoid directional lighting and use ambient lighting. Also,
@@ -172,8 +172,8 @@ class Window1(QWidget):
         CO.saveLabeledCoinsTo(self.ofilename)
         print("A dataset of coins along with their labels (a base dataset) was saved in file:",self.ofilename)
 
-        # Step 1.4. Create augmented coins and their labels, they constutute a training dataset.
-        # Any nonsymetric shape has a dominant orientation. Due to the particular
+        # Step 1.4. Create augmented coins and their labels, they constitute a training dataset.
+        # Any nonsymmetric shape has a dominant orientation. Due to the particular
         # lighting condition of the imaging environment, the most dominant orientation of a
         # coin may be its second or third most dominant orientation. To reorient an extracted
         # coin in the direction of its first 5 most dominant orientations are saved 
@@ -541,7 +541,7 @@ class Window4(QWidget):
     def text_edited3(self, fn):   
         self.datafn = fn
 
-# This window provides the means for the user to specify the name of the directry
+# This window provides the means for the user to specify the name of the directory
 # containing two or more models and the filename of a test (base) dataset.
 class Window5(QWidget): 
     
@@ -591,12 +591,12 @@ class Window5(QWidget):
 
         # Step 4. Using multiple models to recognize coins in a dataset or in an image.
         
-        # The created models predict coins mostly corrently. However, 
+        # The created models predict coins mostly correctly. However, 
         # they sometime make mistakes and the mistakes are not always at the same for
         # different models. Using a voting process and taking into consideration the 
         # accuracy of each recognizer, we let each model vote for the type of a coin with 
         # the accuracy of the recognizer that has been determined earlier. Then, the coin
-        # type receiving the highet vote will be chosen as the most likely type 
+        # type receiving the highest vote will be chosen as the most likely type 
         # for the coin. Although this does not guarantee correct prediction of 
         # all coins, it will very likely produce fewer incorrect predictions 
         # than those obtained by any single model.
@@ -633,7 +633,7 @@ class Window5(QWidget):
     def text_changed2(self, fn):   
         self.datafn = fn
 
-# This window provides the means for the user to specify the name of the directry
+# This window provides the means for the user to specify the name of the directory
 # containing two or more models and the filename of an image containing coins. The
 # models will then be used to recognize coins in the image.
 class Window6(QWidget): 
@@ -932,7 +932,7 @@ This coin detector and recognizer can be upgraded to remove/reduce the above lim
     orientation requires a much larger training dataset to cover all possible environmental 
     lighting conditions and camera orientations. In such a situation, perhaps instead 
     of a pure computer vision segmentation method a deep-learning segmentation method that is 
-    trained with a largerdataset containing coins captured under various lighting conditions and 
+    trained with a larger dataset containing coins captured under various lighting conditions and 
     camera orientation will be required. 
 
 '''
