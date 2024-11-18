@@ -1,4 +1,4 @@
-# MMR: A Multi-model Recognizer
+# MMR: Multi-model Recognizer
 A multi-model recognizer is developed and trained to recognize US coins.
 
 # How to use this software
