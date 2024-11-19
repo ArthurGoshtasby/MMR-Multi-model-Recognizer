@@ -416,9 +416,9 @@ def recognizeUsingMultipleModelsNew(modelsdir, coinTypes, coinValues, imagefn = 
         word = words[1]
         wl = len(word)
         if word[wl-4]=='G' and word[wl-5]=='G' and word[wl-6]=='V':
-          vgg16.append(True)
+            vgg16.append(True)
         else:
-          vgg16.append(False)
+            vgg16.append(False)
         model = keras.models.Sequential()
         # if an MLP model, load it as follows
         # model = pickle.load(open(modelfn, "rb"))
