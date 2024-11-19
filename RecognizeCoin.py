@@ -414,10 +414,11 @@ def recognizeUsingMultipleModelsNew(modelsdir, coinTypes, coinValues, imagefn = 
         weight = int(words[0])/100
         weights.append(weight)
         word = words[1]
-        if word[4]=='G' and word[5]=='G' and word[6]=='V':
-            vgg16.append(True)
+        wl = len(word)
+        if word[wl-4]=='G' and word[wl-5]=='G' and word[wl-6]=='V':
+          vgg16.append(True)
         else:
-            vgg16.append(False)
+          vgg16.append(False)
         model = keras.models.Sequential()
         # if an MLP model, load it as follows
         # model = pickle.load(open(modelfn, "rb"))
@@ -444,9 +445,9 @@ def recognizeUsingMultipleModelsNew(modelsdir, coinTypes, coinValues, imagefn = 
         # for each model
         for j in range(nmodels):
             if vgg16[j]:
-                valimages = valimages2
+              valimages = valimages2
             else:
-                valimages = valimages1
+              valimages = valimages1
             model = models[j]
             # find predictions
             predictions = model.predict(valimages, verbose=0)
