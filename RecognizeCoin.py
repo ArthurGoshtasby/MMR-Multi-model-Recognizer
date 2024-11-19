@@ -414,8 +414,7 @@ def recognizeUsingMultipleModelsNew(modelsdir, coinTypes, coinValues, imagefn = 
         weight = int(words[0])/100
         weights.append(weight)
         word = words[1]
-        wl = len(word)
-        if word[wl-4]=='G' and word[wl-5]=='G' and word[wl-6]=='V':
+        if word[-4]=='G' and word[-5]=='G' and word[-6]=='V':
             vgg16.append(True)
         else:
             vgg16.append(False)
